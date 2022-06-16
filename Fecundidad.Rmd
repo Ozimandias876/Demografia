@@ -1,0 +1,146 @@
+---
+title: "Fecunidad"
+author: "Jorge"
+date: '2022-04-20'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Fecundidad 
+En la demografía existen dos conceptos es necesario diferenciar   
+Fecundidad se refiere al número de hijos que tienen las mujeres     
+Fretilidad se refiere a la capacidad biológica de la mujer de tener hijos   
+**Fecundidad**  
+Factores que impactan en la fecundidad de las mujeres:  
+- Económica   
+- Estado civil   
+- Fisiológicas   
+- Educación  
+- Cultura  
+- Familia  
+- Morbilidad   
+- Acceso a anticonceptivos  
+- Mercado laboral  
+- Fertilidad  
+- Políticas de población (México: Ley general de población CONAPO)  
+
+# Tasa bruta de natalidad 
+$$TBN=\frac{\mbox{Nacimientos}}{\mbox{Poblacion media}}$$
+Normalmente esta TBN se utiliza de manera anual y se interpreta en miles de personas  
+**Ejemplo:**
+$$\mbox{Nacimientos}=470900\\
+\mbox{Poblacion medie}=27720000\\
+TBN=\frac{470900}{27720000}=0.01698773$$
+
+La TBN también se puede interpretar multiplicandola por 1000, es decir, que en esta población nacen 17 niños por cada mil personas
+
+# Fecundidad 
+¿Cuántos hijos puede tener una mujer duratne su vida de fertilidad?  
+Suponemos que inicia a los 15 años terminada en los 45 años 
+
+## Tasas específicas de fecundidad 
+Tasa específica de fecundidad se define de la siguiente manera:
+$$tef=\frac{\mbox{Nacimientos}^i}{\mbox{Pob}^i\mbox{Femenina}}$$
+**Ejemplo:**
+```{r}
+
+Edad = c("15-19","20-24","25-29","30-34","35-39","40-44") 
+NacvivJ = c(14687,116839,307767,389795,209707,31270)
+PobFemJ = c(2974000,3404000,3688000,4286000,4776000,4243000)
+tefJ = c(4.938466711,34.32403055,83.45092191,90.94610359,43.90850084,7.36978552)
+TEFJ <- data.frame(Edad,NacvivJ,PobFemJ,tefJ)
+table(TEFJ)
+
+NacvivM = c(464102,748723,624181,418695,205503,49430)
+PobFemM = c(5505991,5079067,4582202,4444767,4328249,3658904)
+tefM = c(84.29036662,147.4134915,136.2185692,94.19953847,47.47947727,13.50950995)
+TEFM <- data.frame(Edad,NacvivM,PobFemM,tefM)
+table(TEFM)
+
+```
+# Tasa general de fecundidad 
+$$TGF=\frac{\sum_{i=15}^{44} \mbox{Nacimientos}^i}{\sum_{i=15}^{44} \mbox{PobFemenina}^i}$$
+**Ejemplo:**
+$$TGF=\frac{1070035}{23371000}=0.04578473$$
+45.78 nacimietnos por cada mil mujeres en edad de 15 a 44 años
+# Medidas sintéticas de la fecundidad
+Para plantear estas medidas tenemos que partir de algunos supuestos:  
+1. EL grupo poblacional está cerrado a la migración
+2. El grupo está basado en solo un año, es dicir, las tasas o medidas sintéticas que se plantean solo se van a realizar para un año 
+3. Las mujeres no se mueren o no existe mortalidad femenian hasta que concluya su periódo fertil (45 años)
+
+# Tasa general de fecundidad
+Se define de la siguiente manera
+$$TGRF=\sum TEF$$
+La siguiente medida es la tasa bruta de reproducción
+# Tasa burta de reproducción
+y se define como 
+$$TBR=\sum TEF\times S$$
+$$tef=\mbox{tasa especifica de fecundidad}\\
+S=\mbox{probabilidad de sobrevivencia}$$
+la última tasa
+# Tasa neta de reproducción
+$$TNR=\sum tef\times S\times PS$$
+PS= la probabilidad de una mujer de sobrevivir de la edad cero hasta la edad de reproducción
+
+```{r}
+install.packages("tidyverse")
+require(tidyverse)
+TEFS <- data.frame(tefJ,tefM)
+
+grafex00H <- ggplot(TEFS, aes(x = Num,y = tefj)) +
+  geom_point(colour = "darkorchid3",size = 3) + geom_line(color="deeppink3", size=1,linetype = "dashed") + 
+  labs(x = "Grupos de edades", y =  "Tasas generales de fecundidad") +
+  theme(axis.title.x = element_text(face="bold", vjust=-0.5, colour="deepskyblue4", size=rel(1))) +
+  theme(axis.title.y = element_text(face="bold", vjust=1.5, colour="darkcyan", size=rel(1))) +
+  scale_x_continuous(breaks = c(1:6),labels = c("15 a 19","20 a 24","25 a                                                           29","30 a 34",
+                                                 "35 a 39","40 a 44")) +
+  ggtitle ("Grafica de Tasa general de fecundidad  \n México y Japón 2010") +
+  theme (plot.title = element_text(family="Comic Sans MS",size=rel(1), vjust=2,face="bold", color="darkred", lineheight=1.5))
+
+```
+# Tasa de fecundidad en edad despegada 
+$$TGrF=\sum_{i=15}^{44}\frac{\mbox{nac}^i}{\mbox{pobfem}^i}$$
+Por ejemplo si tenemos en el año 2020 en una población 1070035 nacimientos con una población femenina con edad de 15 a 44 años 23371000
+$$TGrF=\frac{1070035}{23371000}=0.04578473$$
+si la multiplicamos por 100 tenemos una tasa de nacimiento 45.78 por cada 1000 mujeres en su vida fértil 
+
+# Tasa Global de Fecundidad 
+$$TGF=\sum_{i=15}^{44} tef^i$$
+# Tasa Bruta de Reproducción 
+$$TBR=\sum_{i=15}^{44}tef\times S\\
+S=\frac{100}{100+\mbox{propsexo}}\\
+\mbox{propsexo}=\frac{\mbox{nachombres}}{\mbox{nacmujeres}}$$
+# Tasa Neta de Reproducción 
+$$TNR=\sum_{i=15}^{44}tef\times S \times PS$$
+donde PS es la probabilidad de sobrevivencia de la mujer según su edad
+# Tasa en Edad Agrupada
+
+donde n es el tamaño del grupo de edad 
+$$TGF=n\times\sum_{i=15}^{44} tef^i\\
+TBR=n\times\sum_{i=15}^{44}tef^i\times S\\
+TNR=n\times\sum_{i=15}^{44}tef^i\times S \times PS$$
+```{r}
+
+gpoedad = c("15-19","20-24","25-29","30-34","35-39","40-44") 
+nac <- c(12130,42105,80935,93107,55985,11480)
+pobfem <- c(727168,782583,791398,751566,814871,769345)
+nacfem <- c(5895,20461,39339,45247,27207,5579)
+nachom <- c(6235,21644,41596,47860,28778,5901)
+propsex=sum(nachom)/sum(nacfem)*100
+S=(100/100+propsex)
+tef<-(nac/pobfem)
+teffem<-(nacfem/pobfem)
+n=S
+TGrF=sum((nac)/pobfem)*S
+TGF <- sum(tef)*n
+TBR <- TGF*n
+tasas <- data.frame(gpoedad,nac,pobfem,nacfem,nachom,tef,teffem)
+
+
+```

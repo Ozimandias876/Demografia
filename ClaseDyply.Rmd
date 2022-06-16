@@ -1,0 +1,50 @@
+---
+title: "ClaseDyply"
+output: html_document
+date: '2022-05-11'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+base1 <- read.csv(file.choose())
+require(dplyr)
+
+  base3 <- base1 %>% 
+  as_tibble() %>% 
+  mutate(gpoeda = case_when (EDAD >=0 & EDAD <= 14 ~ 1, 
+  EDAD >=15 & EDAD<= 29 ~2,
+  EDAD >=30 & EDAD<= 59 ~3,
+  EDAD >=60 & EDAD<= 110 ~4,
+  EDAD ==999 ~ 5),
+  conyu = case_when (SITUA_CONYUGAL == 1 | SITUA_CONYUGAL == 5 ~ 1,
+  SITUA_CONYUGAL >= 2 & SITUA_CONYUGAL <=4 ~ 2,
+  SITUA_CONYUGAL == 6 ~ 3,
+  SITUA_CONYUGAL == 9 ~4)) %>%
+  filter(MUN == 3 | MUN ==1) %>%
+  select(MUN,SITUA_CONYUGAL, conyu, EDAD, gpoeda, SEXO, FACTOR)
+
+table (base3$SEXO)  
+install.packages("questionr")
+require(questionr)
+wtd.table (base3$SEXO, weights = base3$FACTOR)
+wtd.table (base1$SEXO, weights = base1$FACTOR)
+
+
+table (base3$MUN)
+
+table (base3$EDAD, base3$gpoeda)
+table (base3$SITUA_CONYUGAL, base3$conyu)
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

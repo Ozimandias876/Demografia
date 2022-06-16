@@ -1,0 +1,68 @@
+---
+title: "Medidas"
+author: "Jorge"
+date: "11/3/2022"
+output: html_document
+---
+
+Ecuanción compensadora: es uno de los principales elementos más impotantes de la demografía y se plantea de la siguiente manera:
+$$P_{t+n}=P_{t}+N_{t \rightarrow t+n}+F_{t\rightarrow t+n}-E_{t\rightarrow t+n}$$
+**N**= nacimientos
+
+**D**= defunciones 
+
+**I**= inmigrantes
+
+**E**= emigranres
+
+$$P_{t+n}-P_t=(N_{t+n})+(I_{t+n}-E_{t+n})$$
+$$CP=CN+CS$$
+**CP**= crecimiento poblacional 
+
+**CN**= crecimiento natural 
+
+**CS**= crecimiento social 
+
+$$\mbox{Pob}_{2004}=293,657,000$$
+$$\mbox{Pob}_{2005}=296,410,000$$
+$$N_{2004-2005}=4,129,000$$
+$$D_{2004-2005}=2,425,000$$
+$$I_{2004-2005}=1,122,000$$
+$$E_{2004-2005}=73,000$$
+$$(296,410,000-293,657,000)=(4,129,000-2,425,000)+(1,122,000-73,000)$$
+
+$$CP= 2753000\\
+CN= 1704000\\
+CS= 1049000$$
+
+```{r}
+Entidades <- c("EdoMex","Michoacan","Chiapas","Baja California","Nuevo Leon","Jalisco","Sinaloa","Guanajuato")
+CN <- c("EdoMex","Michoacan","Chiapas","Baja California","Nuevo Leon","Jalisco","Sinaloa","Guanajuato")
+CS <- c("EdoMex","Michoacan","Chiapas","Baja California","Nuevo Leon","Jalisco","Sinaloa","Guanajuato")
+CSi <- c("EdoMex","Michoacan","Chiapas","Baja California","Nuevo Leon","Jalisco","Sinaloa","Guanajuato")
+CP <- c("EdoMex","Michoacan","Chiapas","Baja California","Nuevo Leon","Jalisco","Sinaloa","Guanajuato")
+
+```
+Table 2005
+**ENTIDADES**|**$$CN$$**|**$$CS_{I}$$**|**$$\hat CS_{I}$$**|CP|
+-------------|----------|--------------|-------------------|--|
+*Edomex*
+*Michoacan*
+*Chiapas*
+*Baja california*
+*Nuevo león*
+*Jalisco*
+*Sinaloa*
+*Guanajuato*
+*total*
+
+# Tasas Crecimiento Poblacional
+
+1)Tasa de crecimiento anual
+$$TCA=\frac{(P_{t+1}-P_t)}{P_t}$$
+$$TCA=\frac{(296410000-293657000)}{293657000}=0.09357$$
+2)Tasa de crecimiento exponencial (población)
+$$TCE=P_t\times e^{r\times n}$$
+
+$$r=\frac{\ln\left(\frac{P_{t+n}}{P_t}\right)}{n}$$
+

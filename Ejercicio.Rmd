@@ -1,0 +1,43 @@
+---
+title: "Articulo"
+output: html_document
+date: '2022-05-04'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Comparación en la fecundidad del Municipio de Acambay y Villa Guerrero
+```{r}
+
+gpoedad = c("15-19","20-24","25-29","30-34","35-39","40-44") 
+Anac <- c(183,242,256,128,74,21)
+Apobfem <- c(3362,3024,2916,2556,2362,2149)
+Anacfem <- c(96,108,134,63,40,10)
+Anachom <- c(87,134,122,65,34,11)
+Apropsex=sum(Anachom)/sum(Anacfem)*100
+S=(100/100+propsex)
+Atef<-(Anac/Apobfem)
+Ateffem<-(Anacfem/Apobfem)
+n=S
+TGrF=sum((Anac)/Apobfem)*S
+TGF <- sum(tef)*n
+TBR <- TGF*n
+aca <- data.frame(gpoedad,Anac,Apobfem,Anacfem,Anachom,Atef,Ateffem)
+
+Vnac <- c(87,140,104,58,18,6)
+Vpobfem <- c(3290,3145,2949,2613,2315,2074)
+Vnacfem <- c(44,67,57,28,11,2)
+Vnachom <- c(43,73,47,30,7,4)
+Vpropsex=sum(Vnachom)/sum(Vnacfem)*100
+S=(100/100+propsex)
+Vtef<-(Vnac/Vpobfem)
+Vteffem<-(Vnacfem/Vpobfem)
+n=S
+TGrF=sum((Vnac)/Vpobfem)*S
+TGF <- sum(tef)*n
+TBR <- TGF*n
+villa <- data.frame(gpoedad,Vnac,Vpobfem,Vnacfem,Vnachom,Vtef,Vteffem)
+
+
+```

@@ -1,0 +1,35 @@
+---
+title: "Demografía"
+author: "Jorge"
+date: "9/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+La demografía y la población son conceptos relacionados, ya que la demografía es la disciplina que se encarga del estudio de la población. Por población se entiendo como el conjunto  de individuos constituidos de manera estable ligados por vínculos de reproducción identificado por características territoriales, políticas, étnicas o religiosas. Es importante que un población se definirá como tal si tiene continuidad en el tiempo. La demografía estrudiará los procesos que determinan la formación, conservación y desaparición de las poblaciones. 
+
+La unidad básica de la población es el individuo, el cual puede clasificarse en función de inumerables caractearísticas como sexo, edad, estado civil, etc. Al unir las características socioeconómicas y biofísicas nos permite construir un perfil individual útil, para entender los fenómenos relacionados con la fecundidad, mortalidad y movilidad.
+
+Los procesos de agregación y cohesión son esecnialmente selectivos: es decir, que no ejercien la misma presión sobre cada individuo y que la diversa intensidad de su efecto no se debe a efectos casuales
+
+La demografía tiene dos almas: una ligada a lo bilógico y otra ligada a lo social.
+
+Se entiendo por fuentes el instrumento institucional u organizativo mediante el cual se recogen los datos de interés demográfico.
+
+El conocimiento de los datos de estado o de stock, es decir, del tamaño de una población y de sus características, se obtiene normalmente con la operación de recuento llamada censo. El censo debe cumplir ciertos requisitos: 
+Tiene que ser una operación de contabilización individual
+El censo tiene que ser universal dentro de los límites del territorio
+Debe ser simultaneo 
+los censos deben tenr una periodicidad definida normalmente de 10 años
+EL censo es es una encuesta total, dirigida a toda la población.
+La organización del censo requiere un conociemiento detallado del territorio que debe ser subdividido minuciosamente en secciones censales, cada una de las cuales es confiada a un agente censal. El agente censal, debe entregar a cada familia un cuestionario, ayudado por la familia a su complementación, procede a la recogida del cuestionario.
+
+La unidad recogida, es decir, la familia. La familia se define como el grupo de personas, que residen en la misma vivienda familiar, comparten algunos gastos en común, y están vinculados por lazos de parentesco, ya sea de sangre o políticos. Por otra parte se define el hogar el conjunto de personas que, residiendo en una misma vivienda, comparten gastos comunes ocacionados por el uso de la vivienda y/o gastos de alimentación. Los hogares pueden ser unipersonales y los multipersonales. Sin embargo, no toda la población se distribuye en familias, ya que una cierta parte de ella vivie en hogares colectivos, como carceles, colegios y cuerteles militares.
+
+El hecho de que los resultados del censo adquieran validez oficial no es suficiente garantía de su exactitud. Nos interesa hablar de la exactitud de las informaciones de índole social y económica.
+
+
+
+

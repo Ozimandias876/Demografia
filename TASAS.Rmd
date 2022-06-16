@@ -1,0 +1,70 @@
+---
+title: "Tasas Brutas"
+author: "Jorge"
+date: "30/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+**Michoacan 2020**
+
+Población media=4748846
+
+Natalidad=73115
+
+Mortalidad=36614
+
+Emigración=953793
+
+Inmigración=433109
+
+$$TBN=\frac{73115}{4748846}=0.01539637$$
+TBN=0.01539637*1000=15.39637 Por cada 1000 personas en Michoacan en el periodo 2020 nacen 15 pesonas 
+$$TBM=\frac{36614}{4748846}=0.007710084$$
+
+  TBM=0.007710084*1000=7.710084 Por cada 1000 personas en Michoacans en el periodo 2020 mueren 7 pesonas 
+  $$TBI=\frac{433109}{4748846}=0.091203$$
+  
+  TBI=0.091203*1000=91.2034 Por cada 1000 personas en Michoacan en el periodo 2020 inmigran 91 pesonas 
+  $$TBE=\frac{953793}{4748846}=0.2008473$$
+  
+  TBE=0.2008473*1000=200.8473 Por cada 1000 personas en Michoacan en el periodos 2020 emigran 200 pesonas
+  
+```{r}
+entidades<-c("ags","edomes","chiapas")
+TBN <- c(0.0142886,0.01080,0.03949243)
+TBM <-c (0.0069605,0.0089,0.02247131)
+TBI <-c (0.1939034,0.03054,0.01190611)
+TBE <-c (0.101438,0.079,0.1270692)
+base <- data.frame(entidades,TBN,TBM,TBI,TBE)
+base1 <- data.frame(entidades,base[,2:5]*1000)
+
+
+
+```
+### Proporción de sexos al nacimiento ###
+La proporción de sexos al nacimiento se define de la sigueinte menera 
+
+  $$PSN=\frac{nac_h}{nac_m}$$
+  PSN México 
+  $$PSN=\frac{828944}{800264}=1.035838$$
+PSN México=1.035838*100=103.5838 En México en el año 2020 nacen 103 niños por cada 100 niñas
+
+
+### Proporción de niños por mujer ###
+PNM=POB_5 años/Pobfem
+
+POB_5 años = 2827377
+
+Pobfem_15-44 = 23855033
+$$PNM=\frac{2827377}{23855033}=0.1185233$$
+PNM =0.1185233*100=11.85233 En México en el año 2020 hay 11 niños por cada 100 mujeres
+
+### Tasa de dependencia ###
+La tasa de dependencia se relaciona a las personas que tienen más posiblidades de ser dependientes
+TD= (pob_0-14+pob_65 y más)/(pob_15-64)
+
+
+

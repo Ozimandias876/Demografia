@@ -1,0 +1,210 @@
+---
+title: "diagrama"
+author: "Jorge"
+date: "11/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Diagrama de Lexis!!!!! (línea de vida)
+
+El diagrama de Lexis ayuda a comprender algunos eventos y fenómenos demográficos a través de una línea del tiempo!!!!
+Delimitación temporal en demografía es esencial el tiempo como un elemenot indispensable para analizar la dinámica constatne y cambios en espacios poblacionales.
+En particular, en la demografía podemos definir dos tiempos:
+    1) Tiempo calendario
+    2) Tiempo de evnetos demográficos
+    
+    Por ejemplo: edad se puede medir en dos sentidos, por un lado, se mide a partir del nacimiento. Por el otro, 
+    se puede en años cumplidos (aniversario)
+    En demografía existe el concepto de edad exacta.
+    Este concepto de edad exacta se puede ejemplificar de la siguiente manera:
+    supongamos que una persona nació el 23 de junio de 1985 y queremos saber su edad exacta el día de hoy, es decir, 
+    cuántos años tiene al 11 de marzo de 2022.... han ocurrido 262 días hata el 11 de marzo de 2021 
+    8 de julio de 2021 
+    
+    36 años 262 días.... 36+(262/365)= 37.72 edad exacta 37.72 
+    
+    Representación gráfica 
+    
+    #### recordatorio pegar imagen de edad exacta y años cumplidos
+    "############################
+    
+    Un elemento importatne que interésa en los fenómenos demográficos es el número de eventos que ocurren a través del
+    tiempo, en este sentido, en el diagrama de Lexis se pueden representar loa nacimientos, las defunciones,
+    matrimonios, etc, en este diagrama serán tomados los años calendario y las edades cumplidas.
+    
+    Flujo: Con la población que permanece en el tiempo
+    Efectivo: Ocurrencia de una evento en un tiempo determinado
+    Cohorte: Un grupo de individuos que experimenta un evento en un tiempo determinado 
+    Generación: Un grupo de inidviduos que nace en un tiempo determinado
+    
+    Ahora vamos a plantear algunos eventos demográficos que ocurren en el diagrama planteado 
+    
+    ab= nacimientos 1990
+    ac+bd= dos líneas de vida
+    abc= defunciones 1990 
+    cdb= defunciones 1991
+    
+    Digamos que en demografía se pueden plantear tres tipos de análisis:
+    
+    !) Análisis tranversal que se asocia con un momento en el tiempo
+    2) Análisis longitudinal que se vincula con estudios a través del tiempo, es decir, análisis de una generación o
+    anális de cohorte 
+    3) Análisis retrospectivo que realiza con los estudios que se realizan en un tiempo pasado, es deicr, el análisis
+    de vida de una población adulta mayor durante su juventud 
+    
+    
+    En particular vamos a ver el análisis longitudinal que se relaciona con el diagrama de Lexis, uno de los aspectos
+    importantes del diagrama tiene que ver con análisis longitudinales 
+    Por ejemplo, los nacimientos, las defunciones, la numpcialidad se les llama eventos demográficos, de estos eventos
+    surgen fenómenos demográficos como la fecundidad, la mortalidad y la migración
+    
+
+
+################33 Las medidas demográficas 
+
+Medidas relativas:
+
+Razones: es el cociente entre dos magnitudes independientes 
+por ejemplo:
+población masculina / población femenina .... cuántos hombres hay con respecto la población femenina 
+
+Proporciones: es la razón entre dos mediadas de efectivo o flujo 
+ejemplo: 
+población masculina / población total.... poporción de hombres con respecto a la población total 
+nacimeintos de hombres / nacimientos totales.... números de hombres por cada nacimiento ocurrido 
+
+Tasa: es el cociente entre un flujo y un efectivo 
+
+Ejemplo:
+
+nacimientos en un año / población masculina 
+
+Ejemplo de razón:
+
+población masculina / población femenina = 45421/46185= 98.348.... por cada 100 mujeres hay 98.348 hombres
+población masculina=45421
+población femenina=46185
+
+
+Proporción 
+población masculina / población total = 45421/91606= 0.4958.... la proporción de hombres en la población es de 0.49 si lo traducimos a porcentaje multiplicando por 100 podríamos señalar que por cada 100 habitantes 49 son hombres 
+población masculina=45421
+población total= 91606
+
+
+
+Tasas
+
+tasa de nacimiento = nacimientos en un año / población total = 2290 / 92395 = .002478 ... multiplicarlos por 1000 y se interpreta que por cada 100 habitantes, naces 84 personas...
+
+nacimientos= 2290
+población total= 91606
+
+Tasa de crecimiento poblacional = (nacimientos - defunciones) / población a la mitad del año = (2290-420)/92394=0.202 si lo multiplicamos por 100 una tasa de 20.2 y se interpetará que por cada 100 habitantes hay un incremetno de 20 habitantes 
+ejemplo 
+nacimientos=2290
+defunciones=428
+Población= 92394
+
+Tasa de crecimiento social 
+
+#######################################################################################################################################################################
+
+### Tiempo de duplicidad de una población #####
+  lo que se intenta plantear y conocer es en que tiempo una población determinada se duplica, para lo anterior se plantea la      siguiente ecuación que está basada en la tasa de crecimiento exponencial
+  
+  pt=población inicial
+  pt+n=población final
+  r=tasa de crecimeinto exponencial
+  n=tiempo
+  
+  pt+n=pt*e^(r*n) #### tasa de crecimiento exponencial ###
+  para conocer cuándo se duplica la población, necesitamos despejar n!!! porque queremos conocer cuántos años tarda una           población en duplicarse!!!
+  
+  pt+n /pt = e^(r*n)
+  
+  pt+n /pt = 2
+  
+  2=e^(r*n)
+  r=0.01399828
+  ln(2)=r*n
+  0.6931=(0.01399828)*n
+  n=0.6931/0.01399828
+  n=49.5131
+si tenemos uan tasa de crecimeitno de 1.399829 entonces el tiempo de duplicación de nuestra población será de 49.51 años
+
+Ejercicio: Queremos conocer en que tiempo se va a suplicar la población con tasa de crecimeinto de 1970... sabesmos que la tasa de crecimiento era de 3.1
+tenemos que en 1970 había 50.6 millines de personas
+¿En cuánto tiempo en México tendríamos 100 millones de personas con una tasa de crecimiento de 3.1?
+R = 22.29
+En el año 2000 la tasa de crecimiento era 1.4, en México había en el año 2000 99 millones de personas cualcular
+¿En Cuánto tiempo en México tendríamos 198 millones de personas con una tasa de crecimiento de 3.1?
+R = 49.51
+
+###############################################################################################################################3
+
+Dinámica Demográfica
+  En la dinámica demográfica se relaciona con el tamaño, la comoposición, las pérdidas y las ganancias de la población.
+  El tamaño se refiere a la cantidad de personas que existen en un territorio en un tiempo determinado, 
+  la composición se refiere al sexo, grupos de edad
+  Las perdidas y ganancias se vinculas con la fecundidad (ganancias), mortalidad(pérdidas) y la migración 
+  
+  #### Tasas brutas de población 
+  Una tasa bruta como su nombre lo indica y no considera la comoposición de la población (sexo, edad, uniones o matrimonios)
+  la vamos a definir de la siguiente manera:
+  
+  TB= evento / población media
+  
+  la población media se define como el promedio de la población durante un periodo de tiempo.
+  la población a mitad del año... normalmente se relaciona con los datos del censo... y se asocia a conocer la población a mitad
+  de año en (30 de junio).
+  
+  Tenemos la población del años 2004 es de 293657000 y la población del año 2005 es 296410000
+  entonces la población media del año 2004 - 2005 es la siguiente: Pmed = (293657000+296410000)/2=295033500
+  
+  Calcular la tasas brutas de los siguientes eventos:
+  Tasad brutas de Estados Unidos del 2004 - 2005
+  Eventos: Nacimietnos=4129000; Muertes=2425000; Inmigración=1122000; Emigración=73000
+  
+  TBN=0.01399502*1000=13.99502 Por cada 1000 personas en Estados Unidos en el periodos 2004 - 2005 nacen 14 pesonas 
+  TBM=0.0082194060*1000=8.219406 Por cada 1000 personas en Estados Unidos en el periodos 2004 - 2005 mueren 8 pesonas 
+  TBI=0.0038029580*1000=3.802958 Por cada 1000 personas en Estados Unidos en el periodos 2004 - 2005 inmigran 4 pesonas 
+  TBE=0.0002474295*100000=24.74295 Por cada 100000 personas en Estados Unidos en el periodos 2004 - 2005 emigran 24 pesonas 
+  
+  
+  ###########################################################################
+  
+  #### Tasas específicas ####
+  Estas tasas sí tienen relación con las características poblacionales (sexo, grupos de edad)
+  el plantamiento de las tasas específicas es el siguiente:
+   
+   Te^i=E^i / Pob^i
+   Te= tasa específica de un evento con la característica i (15-19)
+   E^i= es el núemero del evento de característica i (15-19)
+   Pob^i= es la población media con característica i (15-19)
+   
+   ##### Proporción de sexos #####
+   Es un indicador demográfico que nos permite conocer la cantidad de hombres que existen con relación a las mujeres
+   
+   La proporción de sexos es un indicador que muestra el balance entre el número de hombres y mujeres.
+   Por ejemplo, se puede calcular la proporción masculina y se calcula dividiento el número de hombres entre el número de          mujeres. Se define de la siguiente manera:
+   
+   PS= Hombres^i / Mujeres^i
+   Hombres de (0 a 4 años ) en el 2008 = 8226630..... Brazil
+   Mujeres de (0 a 4 años ) en el 2008 = 7976611..... Brazil
+   
+   Hombres de (0 a 4 años ) en el 2008 = 1453690..... Italia
+   Mujeres de (0 a 4 años ) en el 2008 = 1373687..... Italia 
+   
+   PS^(0 a 4) = (8226630/7976611) = 1.031344..... para una mejor interpretación multiplicamos por 100 y tendríamos que en Brazil    el grupo de edad de 0 a 4 años hay 103 hombres por cada 100 mujeres 
+   
+   PS^(0 a 4) = (1453690/1373687) = 1.05824..... para una mejor interpretación multiplicamos por 100 y tendríamos que en Italia    el grupo de edad de 0 a 4 años hay 105 hombres por cada 100 mujeres 
+   
+   
+
+
+    

@@ -1,0 +1,50 @@
+---
+title: "Mortalidad"
+author: "Jorge"
+date: "18/5/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mortalidad
+Esperanza de vida sea mayor
+- Pensiones 
+- Gastos de salud (Privado y Público)
+- Presión hacia la Población Económicamente Activa (PEA)
+Muerte: Desaparición de toda evidencia de vida en cualquier tiempo después de que una persona haya nacido vivo  
+
+# Tasa Bruto de Moartalidad (TBM)
+$$TBM_{t\rightarrow t+n}=\frac{M_{t\rightarrow t+n}}{P_{t\rightarrow t+n}}$$
+donde 
+
+$$ M=\mbox{Muertes del tiempo } t\ \mbox{a } tn \\
+P=\mbox{Población a mitad de año de }t\ \mbox{a }  tn
+$$
+** Ejemplo **
+$$M&=623300\\
+P&=127000000\\
+TBM=\frac{623300}{127000000}=0.004907874\\
+TBM\times 1000= 4.907874$$
+La TBM se interpreta como 4.907874 muertes por cada 1000 personas 
+# Tasa Específica de Mortalidad (TEM)
+La tasa específica de mortalidad calcula la mortalidad por grupo de edad y permite conocer la tasa por cada grupo de edad.   
+La TEM se calcula porque la mortalidad es diferenciada por edad o grupo de edad. Por ejemplo, las personas de 0 a 9 años tienen una mayor mortalidad que las personas de 1 a 4 años o de 5 a 9 
+
+$$TEM_{t\rightarrow t+n}^i=\frac{M_{t\rightarrow t+n}^i}{P_{t\rightarrow t+n}^i}$$
+$$i=\mbox{el grupo de edad}\\
+M_{t\rightarrow t+n}^i=\mbox{Muertes del tiempo } t \ \mbox{a } tn \\
+P_{t\rightarrow t+n}^i=\mbox{Población a mitad de año de }t\ \mbox{a } tn\\
+$$
+Ejemplo:
+```{r}
+gpoeda <- c("<1","1a 4","...","65 a 69","70 y más")
+muertes <- c(8321,2132,95748,157197)
+pob <- c(12243521,12873410,5872590,1735817)
+tem <-(muertes/pob)
+temmil<-((nacfem/pob)*10000)
+
+
+```

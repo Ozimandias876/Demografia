@@ -1,0 +1,23 @@
+---
+title: "Tabla"
+author: "Jorge"
+date: "27/5/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Tabla de vida
+Con los años personas vivido (Lx)  
+ahora se calcula el total de personas vivido a la edad x con la siguiente ecuación
+$$T_x=L_x+L_{x+1}+\cdots + L_{w}$$
+$$ T_x=\mbox{Total de personas que viven a la edad x}\\
+L_x=\mbox{Años de personas vividos a la edad x}
+$$
+Los indicadores anteriores se plantearon para calcular la esperanza de vida  y se define:
+$$e_x=\frac{T_x}{l_x}$$
+$$l_0=100000$$
+
+
